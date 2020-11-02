@@ -10,7 +10,9 @@
     width: 100%;
     background-image: url(Radiance_img/bg1.png);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -53,6 +55,12 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #fff;
+    color: black;
+    transition: 0.5s;
+}
+
 .container {
     width: 50%;
     height: 100vh;
@@ -64,7 +72,7 @@ button {
 }
 
 .info {
-    width: 550px;
+    width: 500px;
     color: #fff;
     position: absolute;
     right: 10%;
@@ -94,6 +102,7 @@ button {
     border-radius: 20px;
     color: #fff;
     font-size: 12px;
+    cursor: pointer;
 }
 
 ::placeholder {
@@ -104,8 +113,8 @@ button {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 30px;
-    bottom: 50px;
+    bottom: 5%;
+    left: 5%;
 }
 
 .prev, .next {
@@ -132,4 +141,106 @@ button {
     border: 3px solid #fff;
     width: 100px;
     opacity: 1;
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar .logo {
+        width: 90px;
+        height: 60px;
+        margin: 40px 0;
+        cursor: pointer;
+    }
+   
+    button { 
+        padding: 10px 55px;
+        background: transparent;
+        outline: none;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .info {
+        width: 400px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(-50%);
+    }
+
+    .info h1 {
+        text-transform: uppercase;
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
+    
+    .info p {
+        color: #f0eef1;
+        font-size: 23px;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+        
+    .info input {
+        width: 50%;
+        padding: 10px 20px;
+        outline: none;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 230px;
+        bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) { 
+    .info {
+        width: 300px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(-50%);
+    }
+
+    .info h1 {
+        text-transform: uppercase;
+        font-size: 45px;
+        letter-spacing: 10px;
+    }
+
+        
+    .info input {
+        width: 100%;
+        padding: 10px 20px;
+        outline: none;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 10%;
+        bottom: 5%;
+    }
+    
 }
